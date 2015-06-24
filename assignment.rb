@@ -1,48 +1,58 @@
 # Level 1 
 class Dinosaurs
-  attr_accessor :horns, :diet
-  # :move
+  attr_accessor :sarah, :duckie
 
   def initialize
-    puts "Yeah I'm a dinosaur so rawr and stuff."
+    puts "Hey Sarah, if a dinosaur has good dental hygiene, would it be called a flossoraptor?"  
   end
 end
 
-class Diet  
-  def carnivore  
-    puts "If a dinosaur has good dental hygiene, would it be called a flossoraptor?"  
+class Rawr < Dinosaurs
+  def sharptooth  
+    puts "Yeah I'm a dinosaur so rawr and stuff."
   end  
-  def herbivore  
+  
+  def little_bit  
     puts "Motha Fuckin TREESTARS!!!"  
   end  
-  def horns
-    puts "Three horns don't play with long necks!"
-    super
-  end
 end 
 
-class Teeth < Diet  
-  def herbivore  
-    puts "Sorry. I have a reptile dysfunction... from a lack of " 
-    super 
+class Play < Rawr  
+  def little_bit  
+    puts "Sorry. I have a reptile dysfunction... from a lack of:" 
+  end
+
+  def sarah
+    puts "YOU IDIOT, three horns don't play with long necks!"
   end  
+
+  def duckie
+    puts "RUN!!!"
+  end
 end  
 
-# class Appendages 
-#   # attr_accessor :move
-#   def move
-#     case @move
-#     when "legs"
-#       puts "Run Little Bit, RUN!!!"
-#     when "wings"
-#       puts "Do not feel sad. It is alright. 
-#         Many things cannot fly. Rocks, trees, sticks, Spike..."
-#     else
-#       puts "Evolution kills."
-#   end
-# end  
+lbt = Play.new  
+lbt.sarah 
+lbt.little_bit
+lbt.sharptooth
+lbt.duckie
 
-sharptooth = Teeth.new  
-sharptooth.carnivore  
-sharptooth.herbivore 
-sharptooth = Dinosaurs.new
+# class D
+#   def eat(food: "friends and houseplants", amount: "100lbs")
+#     puts "I like to eat #{:food}"
+#   end
+# end
+
+# class R < D
+#   def eat
+#     super(food: "plant", amount: "a lot")
+#   end
+# end
+
+
+
+
+
+
+
+
